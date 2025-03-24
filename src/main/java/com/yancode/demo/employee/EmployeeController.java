@@ -17,8 +17,10 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
+
     @GetMapping("/employees")
     public ResponseEntity<List<Employee>> getEmployees() {
+        // liste employee
         return ResponseEntity.ok(employeeService.findAll());
     }
 
